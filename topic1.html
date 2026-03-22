@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HTTP History - Web Evolution</title>
+    <title>HTTP History</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <nav>
-        <ul>
+        <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
             <li><a href="topic1.html">HTTP History</a></li>
             <li><a href="topic2.html">Modern Web</a></li>
@@ -16,22 +16,15 @@
             <li><a href="about.html">About Me</a></li>
         </ul>
     </nav>
-
-    <main>
-        <h1>The Early Evolution of HTTP</h1>
-        <section>
-            <h2>The Beginnings (HTTP/0.9)</h2>
-            <p>Created in 1989 by Tim Berners-Lee, the first version of HTTP was incredibly simple. It could only fetch a single HTML file and did not support images or stylesheets [cite: 283-284].</p>
-        </section>
-
-        <section>
-            <h2>Standardization (HTTP/1.0 and 1.1)</h2>
-            <p>HTTP/1.0, standardized in 1996, added headers and support for different content types[cite: 287]. However, it required a new connection for every single request[cite: 289]. HTTP/1.1 improved this in 1997 by introducing persistent connections, allowing the browser to keep a connection open for multiple files [cite: 292-293].</p>
-        </section>
+    <main id="content-wrapper">
+        <h1>The History of HTTP</h1>
+        <h2>HTTP/0.9 and 1.0</h2>
+        <p>HTTP started as a simple way to move research papers. HTTP/0.9 could only fetch a single HTML file with no images[cite: 283, 284]. HTTP/1.0 added headers and support for different content types in 1996[cite: 287].</p>
+        <h2>HTTP/1.1</h2>
+        <p>Introduced in 1997, HTTP/1.1 added persistent connections so browsers didn't have to keep reconnecting for every single file[cite: 292, 293].</p>
     </main>
-
     <footer>
-        <p>This is a class project. <a href="https://ksuweb.github.io/IT3203/">IT 3203 Class Website</a></p>
+        <p>This is a class project: <a href="https://ksuweb.github.io/IT3203/">IT 3203 Class Website</a></p>
     </footer>
 </body>
 </html>
