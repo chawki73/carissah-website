@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Evolution - Quiz</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="topic1.html">HTTP History</a></li>
+            <li><a href="topic2.html">Modern Web</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="about.html">About Me</a></li>
+        </ul>
+    </nav>
+
+    <main id="content-wrapper">
+        <h1>Self-Assessment Quiz</h1>
+        <p>Test your knowledge on the evolution of web protocols!</p>
+        <hr>
+
+        <form id="quiz-form">
+            <div class="question-block">
+                <p>1. What does the "S" in HTTPS stand for?</p>
+                <input type="text" id="q1" name="q1" placeholder="Type your answer here">
+            </div>
+
+            <div class="question-block">
+                <p>2. Which version of HTTP introduced multiplexing?</p>
+                <input type="radio" id="q2a" name="q2" value="HTTP/1.0">
+                <label for="q2a">HTTP/1.0</label><br>
+                <input type="radio" id="q2b" name="q2" value="HTTP/1.1">
+                <label for="q2b">HTTP/1.1</label><br>
+                <input type="radio" id="q2c" name="q2" value="HTTP/2">
+                <label for="q2c">HTTP/2</label>
+            </div>
+
+            <div class="question-block">
+                <p>3. What year was HTTP/1.0 standardized?</p>
+                <input type="radio" id="q3a" name="q3" value="1989">
+                <label for="q3a">1989</label><br>
+                <input type="radio" id="q3b" name="q3" value="1996">
+                <label for="q3b">1996</label><br>
+                <input type="radio" id="q3c" name="q3" value="2015">
+                <label for="q3c">2015</label>
+            </div>
+
+            <div class="question-block">
+                <p>4. Which protocol is the foundation for HTTP/3?</p>
+                <input type="radio" id="q4a" name="q4" value="TCP">
+                <label for="q4a">TCP</label><br>
+                <input type="radio" id="q4b" name="q4" value="QUIC">
+                <label for="q4b">QUIC</label><br>
+                <input type="radio" id="q4c" name="q4" value="FTP">
+                <label for="q4c">FTP</label>
+            </div>
+
+            <div class="question-block">
+                <p>5. Which of the following are benefits of HTTPS? (Select all that apply)</p>
+                <input type="checkbox" id="q5a" name="q5" value="Encryption">
+                <label for="q5a">Encryption</label><br>
+                <input type="checkbox" id="q5b" name="q5" value="Data Integrity">
+                <label for="q5b">Data Integrity</label><br>
+                <input type="checkbox" id="q5c" name="q5" value="Slower Speeds">
+                <label for="q5c">Slower Speeds</label>
+            </div>
+
+            <br>
+            <button type="button" onclick="submitQuiz()">Submit Quiz</button>
+            <button type="reset" onclick="resetQuiz()">Reset Quiz</button>
+        </form>
+
+        <div id="results" style="margin-top: 30px; display: none; padding: 20px; border: 2px solid #ccc;">
+            <h3>Your Results</h3>
+            <p id="score-display"></p>
+            <div id="detailed-feedback"></div>
+        </div>
+    </main>
+
+    <script src="js/script.js"></script>
+
+    <footer>
+        <p>This is a class project: <a href="https://ksuweb.github.io/IT3203/">IT 3203 Class Website</a></p>
+    </footer>
+</body>
+</html>
