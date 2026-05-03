@@ -1,17 +1,24 @@
 function submitQuiz() {
+
+    const unanswered = document.querySelectorAll('input[type="radio"]:checked').length;
+
+    if (unanswered < 3) {
+        alert("Please answer all multiple-choice questions before submitting.");
+        return;
+    }
+
     let score = 0;
     const totalQuestions = 5;
     let feedbackHTML = "";
 
-    // 1. Fill-in-the-blank: HTTPS "S" (Requirement: filling-blank [cite: 10])
+    // 1. Fill-in-the-blank
     const q1Answer = document.getElementById('q1').value.trim().toLowerCase();
     if (q1Answer === "secure") {
         score++;
         feedbackHTML += "<p class='correct'>Question 1: Correct! (Secure)</p>";
     } else {
         feedbackHTML += "<p class='incorrect'>Question 1: Incorrect. The 'S' stands for Secure.</p>";
-    }
-
+}
     // 2. Multiple Choice: Multiplexing (Requirement: 3 multiple-choice [cite: 10])
     const q2 = document.querySelector('input[name="q2"]:checked');
     if (q2 && q2.value === "HTTP/2") {
